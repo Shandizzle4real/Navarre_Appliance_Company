@@ -1,145 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navarre Appliance Company | Coming Fall 2026</title>
-    <style>
-        :root {
-            --emerald: #008080;
-            --navy: #1a3a5a;
-            --orange: #ff8c00;
-            --white: #ffffff;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navarre Appliance Company | Coming Soon</title>
 
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--navy);
-        }
+<style>
+:root {
+    --navy: #1a3a5a;
+    --emerald: #008080;
+    --orange: #ff8c00;
+    --light: #f8f9fb;
+}
 
-        /* Background image with blur effect */
-        .bg-image {
-            position: fixed;
-            left: 0;
-            right: 0;
-            z-index: -1;
-            display: block;
-            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80'); /* Representative beach background */
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 100%;
-            filter: blur(8px);
-            transform: scale(1.1);
-        }
+* {
+    box-sizing: border-box;
+}
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background: rgba(255, 255, 255, 0.85);
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
 
-        .logo {
-            max-width: 250px;
-            margin-bottom: 20px;
-        }
+/* Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+/* Logo */
+.logo {
+    max-width: 220px;
+    margin-bottom: 20px;
+}
 
-        .countdown {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--emerald);
-            margin: 20px 0;
-            border-top: 2px solid var(--emerald);
-            border-bottom: 2px solid var(--emerald);
-            padding: 15px 0;
-            width: 100%;
-        }
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-        .location {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
 
-        .signup-form {
-            width: 100%;
-        }
+/* Countdown */
+.countdown {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-        input[type="email"] {
-            padding: 12px;
-            width: 70%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
+.time-box {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    padding: 15px 20px;
+    border-radius: 10px;
+    min-width: 80px;
+}
 
-        button {
-            padding: 12px 25px;
-            background-color: var(--navy);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
+.time-box span {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
 
-        button:hover {
-            background-color: var(--emerald);
-        }
+.time-box small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
 
-        footer {
-            margin-top: 50px;
-            font-size: 0.9rem;
-            color: #666;
-        }
-    </style>
+/* Form */
+.form-box {
+    margin-top: 20px;
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-box h3 {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e67600;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+</style>
 </head>
+
 <body>
 
-    <div class="bg-image"></div>
+<div class="container">
 
-    <div class="container">
-        <img src="file.png" style="width: 150%; height: auto;" alt="Navarre Appliance Company Logo" class="logo">
+    <!-- 👉 Replace with your uploaded logo -->
+    <img src="file.png" class="logo" alt="Navarre Appliance Company">
 
-        <h1>Navarre Appliance Company</h1>
-        
-        <div class="countdown">
-            COMING FALL 2026
-        </div>
+    <h1>Navarre Appliance Company</h1>
+    <p class="tagline">Reliable Appliance Service Coming Soon</p>
 
-        <p class="location">Servicing:</p>
-        <p class="location">Pensacola, Gulf Breeze, Navarre + Surrounding areas</p>
-
-        <div class="signup-form">
-            <h3>STAY IN THE LOOP</h3>
-            <form action="#" method="post">
-                <input type="email" placeholder="Your Email Address" required>
-                <button type="submit">NOTIFY ME</button>
-            </form>
-        </div>
-
-        <footer>
-            &copy; 2026 Navarre Appliance Company. All rights reserved.
-        </footer>
+    <!-- COUNTDOWN -->
+    <div class="countdown">
+        <div class="time-box"><span id="days">0</span><small>Days</small></div>
+        <div class="time-box"><span id="hours">0</span><small>Hours</small></div>
+        <div class="time-box"><span id="minutes">0</span><small>Minutes</small></div>
+        <div class="time-box"><span id="seconds">0</span><small>Seconds</small></div>
     </div>
+
+    <!-- FORM -->
+    <div class="form-box">
+        <h3>Get Launch Updates</h3>
+
+        <form action="https://formsubmit.co/navarreappliancecompany@gmail.com" method="POST">
+            
+            <!-- Required for FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Navarre Appliance Lead!">
+
+            <input type="text" name="contact" placeholder="Email or Phone Number" required>
+
+            <button type="submit">Notify Me</button>
+        </form>
+    </div>
+
+    <footer>
+        © 2026 Navarre Appliance Company
+    </footer>
+
+</div>
+
+<script>
+// Countdown to August 1, 2026
+const launchDate = new Date("August 1, 2026 00:00:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = launchDate - now;
+
+    if (distance <= 0) {
+        document.querySelector(".countdown").innerHTML = "🚀 We're Live!";
+        return;
+    }
+
+    document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById("hours").innerText = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    document.getElementById("minutes").innerText = Math.floor((distance / (1000 * 60)) % 60);
+    document.getElementById("seconds").innerText = Math.floor((distance / 1000) % 60);
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
 
 </body>
 </html>
